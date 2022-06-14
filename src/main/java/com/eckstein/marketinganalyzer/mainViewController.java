@@ -1,11 +1,8 @@
 package com.eckstein.marketinganalyzer;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 
-import java.sql.Connection;
-
-public class HelloController {
+public class mainViewController {
 
     private Database db;
 

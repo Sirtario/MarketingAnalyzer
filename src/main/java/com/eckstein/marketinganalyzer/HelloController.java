@@ -7,11 +7,17 @@ import java.sql.Connection;
 
 public class HelloController {
 
+    private Database db;
+
     @FXML
     public void initialize()
     {
 
 
 
+    }
+
+    public void setDB(Database db) {
+        this.db=db;
     }
 }

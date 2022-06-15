@@ -5,13 +5,11 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eckstein.marketinganalyzer.mainViewController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -42,58 +40,38 @@
    <center>
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
         <tabs>
-          <Tab text="Kunden">
+          <Tab fx:id="KundenTab" onSelectionChanged="#UpdateKundenTable" text="Kunden">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="343.0" prefWidth="600.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
+                        <TableView fx:id="KundenTable" prefHeight="343.0" prefWidth="600.0" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Angebote">
+          <Tab fx:id="AngeboteTap" onSelectionChanged="#UpdateAngeboteTable" text="Angebote">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="343.0" prefWidth="600.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
+                        <TableView fx:id="AngeboteTable" prefHeight="343.0" prefWidth="600.0" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-            <Tab text="Kontakt">
+            <Tab fx:id="KontakteTap" onSelectionChanged="#UpdateKontakteTable" text="Kontakt">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView prefHeight="340.0" prefWidth="600.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
+                        <TableView fx:id="KontakteTable" prefHeight="340.0" prefWidth="600.0" />
                      </children>
                   </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Aufträge">
+            <Tab fx:id="AuftraegeTap" onSelectionChanged="#UpdateAuftraegeTable" text="Aufträge">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <TableView layoutY="-1.0" prefHeight="341.0" prefWidth="600.0">
-                          <columns>
-                            <TableColumn prefWidth="75.0" text="C1" />
-                            <TableColumn prefWidth="75.0" text="C2" />
-                          </columns>
-                        </TableView>
+                        <TableView fx:id="AuftraegeTable" layoutY="-1.0" prefHeight="341.0" prefWidth="600.0" />
                      </children>
                   </AnchorPane>
               </content>
